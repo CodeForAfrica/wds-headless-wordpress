@@ -1,0 +1,51 @@
+[
+    {
+        "key": "group_60c0d0ebb9ba4",
+        "title": "Banner",
+        "fields": [
+            {
+                "key": "field_60c0d0f5205fa",
+                "label": "Item",
+                "name": "item",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "show_in_graphql": 1,
+                "post_type": [
+                    "banner"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/banners"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_graphql": 1,
+        "graphql_field_name": "bannersBlock",
+        "modified": 1623249408
+    }
+]
