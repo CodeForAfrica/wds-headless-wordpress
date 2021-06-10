@@ -19,17 +19,12 @@ if ( defined( 'WPSEO_VERSION' ) ) {
 	 * @return array              Filtered breadcrumbs.
 	 */
 	function wds_breadcrumb_links( array $breadcrumbs ) {
-		if ( ! defined( 'HEADLESS_FRONTEND_URL' ) ) {
-			return $breadcrumbs;
-		}
 
-		$base_url = rtrim( HEADLESS_FRONTEND_URL, '/' );
-
-		// Override domain in breadcrumbs.
-		return array_map( function( $breadcrumb ) use ( $base_url ) {
+		// Return path in breadcrumbs.
+		return array_map( function( $breadcrumb ) {
 			$parsed_url        = wp_parse_url( $breadcrumb['url'] );
 			$path              = $parsed_url['path'] ?? '';
-			$breadcrumb['url'] = "{$base_url}{$path}";
+			$breadcrumb['url'] = "/{$path}";
 
 			return $breadcrumb;
 		}, $breadcrumbs );
