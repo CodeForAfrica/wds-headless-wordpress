@@ -24,7 +24,7 @@ if ( defined( 'WPSEO_VERSION' ) ) {
 		return array_map( function( $breadcrumb ) {
 			$parsed_url        = wp_parse_url( $breadcrumb['url'] );
 			$path              = $parsed_url['path'] ?? '';
-			$breadcrumb['url'] = $path;
+			$breadcrumb['url'] = "/{$path}";
 
 			return $breadcrumb;
 		}, $breadcrumbs );
