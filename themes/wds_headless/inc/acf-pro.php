@@ -67,6 +67,74 @@ if ( class_exists( 'acf_pro' ) ) {
 				'supports'        => $supports,
 			]
 		);
+
+		// Banners.
+		acf_register_block_type(
+			[
+				'name'            => 'banners',
+				'title'           => esc_html__( 'Banner', 'wds' ),
+				'description'     => esc_html__( 'A block to display a banners post.', 'wds' ),
+				'render_callback' => '',
+				'category'        => 'section',
+				'icon'            => 'images-alt2',
+				'keywords'        => [ 'banners' ],
+				'mode'            => 'edit',
+				'enqueue_assets'  => '',
+				'align'           => 'wide',
+				'supports'        => $supports,
+			]
+		);
+
+		// Explore block.
+		acf_register_block_type(
+			[
+				'name'            => 'explore-list',
+				'title'           => esc_html__( 'Explore List', 'wds' ),
+				'description'     => esc_html__( 'A block to display list of explore cards.', 'wds' ),
+				'render_callback' => '',
+				'category'        => 'section',
+				'icon'            => 'images-alt2',
+				'keywords'        => [ 'explore' , 'list'],
+				'mode'            => 'edit',
+				'enqueue_assets'  => '',
+				'align'           => 'wide',
+				'supports'        => $supports,
+			]
+		);
+
+		// Key Indicators Block.
+		acf_register_block_type(
+			[
+				'name'            => 'key-indicators-list',
+				'title'           => esc_html__( 'Key Indicators List', 'wds' ),
+				'description'     => esc_html__( 'A block to display list of key Indicators.', 'wds' ),
+				'render_callback' => '',
+				'category'        => 'section',
+				'icon'            => 'images-alt2',
+				'keywords'        => [ 'key', 'indicator', 'list' ],
+				'mode'            => 'edit',
+				'enqueue_assets'  => '',
+				'align'           => 'wide',
+				'supports'        => $supports,
+			]
+		);
+
+		// Key Statistics block.
+		acf_register_block_type(
+			[
+				'name'            => 'key-statistics-list',
+				'title'           => esc_html__( 'Key Statics List', 'wds' ),
+				'description'     => esc_html__( 'A block to display list of key statistics', 'wds' ),
+				'render_callback' => '',
+				'category'        => 'section',
+				'icon'            => 'images-alt2',
+				'keywords'        => [ 'key', 'list', 'statistics' ],
+				'mode'            => 'edit',
+				'enqueue_assets'  => '',
+				'align'           => 'wide',
+				'supports'        => $supports,
+			]
+		);
 	}
 	add_action( 'acf/init', 'wds_acf_blocks_init' );
 }
